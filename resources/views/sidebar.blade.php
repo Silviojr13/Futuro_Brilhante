@@ -99,12 +99,12 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/tables">
+                <a class="nav-link" href="/alunostb">
                     <i class="fas fa-fw fa-table"></i>
                     <span>tabela aluno</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/tables">
+                <a class="nav-link" href="/professorestb">
                     <i class="fas fa-fw fa-table"></i>
                     <span>tabela professor</span></a>
             </li>

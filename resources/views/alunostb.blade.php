@@ -22,7 +22,25 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+    <style>
+        /* Estilos adicionais para melhorar a aparência do botão flutuante */
+        .floating-btn {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #007bff; /* Cor do botão (azul) */
+          color: #fff; /* Cor do texto (branco) */
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          font-size: 24px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+      </style>
 </head>
 
 <body id="page-top">
@@ -250,10 +268,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -287,8 +302,8 @@
                                             <td>{{ $aluno->Sobrenome }}</td>
                                             <td>{{ $aluno->Email }}</td>
                                             <td>
-                                                <a href="{{ route('edit', ['ID_Aluno' => $aluno->id]) }}" class="btn btn-primary">Editar</a>
-                                                <a href="{{ route('delete', ['ID_Aluno' => $aluno->id]) }}" class="btn btn-danger">Deletar</a>
+                                                <a href="{{ route('editAluno', ['ID_Aluno' => $aluno->id]) }}" class="btn btn-primary">Editar</a>
+                                                <a href="{{ route('deleteAluno', ['ID_Aluno' => $aluno->id]) }}" class="btn btn-danger">Deletar</a>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -298,6 +313,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="/cadastrarAluno" class="floating-btn"><i class="fas fa-plus"></i></a>
 
                 </div>
                 <!-- /.container-fluid -->
