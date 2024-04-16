@@ -10,5 +10,6 @@ class Professor extends Model
     use HasFactory;
 
 
-    protected $fillable = ['Titulo', 'Descricao', 'Data_Publicacao', 'Imagem'];
+    protected $fillable = ['titulo', 'descricao', 'data_publicacao', 'imagem'];
 }
+

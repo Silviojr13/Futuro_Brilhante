@@ -9,17 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>home</title>
+    <title>Cadastrar Post</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+    {{-- ====================================================================================== --}}
+    {{-- include abaixo responsável por adicionar import de css ou demais de forma simplificada --}}
+    @include('includes')
+    {{-- ====================================================================================== --}}
+    
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-    @include('includes')
 
 </head>
 
@@ -27,7 +29,6 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
 
         <!-- Sidebar -->
         @include('sidebar')
@@ -45,42 +46,36 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                  {{-- escreva aqui --}}
+                    <h1 class="h3 mb-4 text-gray-800">Cadastrar Post</h1>
 
-
-                  <table class="table table-bordered" id="alunosTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Titulo</th>
-                            <th>Descrição</th>
-                            <th>Data da Publicação</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Titulo</th>
-                            <th>Descrição</th>
-                            <th>Data da Publicação</th>
-                            <th>Ações</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <!-- Loop through alunos and display them -->
-                        {{-- @foreach($posts as $post)
-                        <tr>
-                            <td>{{ $post->Nome }}</td>
-                            <td>{{ $post->Sobrenome }}</td>
-                            <td>{{ $post->Email }}</td>
-                            <td>
-                                <a href="{{ route('editPost', ['ID_Post' => $post->id]) }}" class="btn btn-primary">Editar</a>
-                                <a href="{{ route('deletePost', ['ID_Post' => $post->id]) }}" class="btn btn-danger">Deletar</a>
-                            </td>
-                        </tr>
-                        @endforeach --}}
-                    </tbody>
-                </table>
-                <a href="/cadastrarAluno" class="floating-btn"><i class="fas fa-plus"></i></a>
+                    <form action="/cadastrar_post" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="titulo">Título:</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo">
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição:</label>
+                            <textarea class="form-control" id="descricao" name="descricao"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="data_publicacao">Data de Publicação:</label>
+                            <input type="date" class="form-control" id="data_publicacao" name="data_publicacao">
+                        </div>
+                        <div class="form-group">
+                            <label for="imagem">Imagem:</label>
+                            <input type="file" class="form-control-file" id="imagem" name="imagem">
+                        </div>
+                        {{-- <div class="form-group">
+                            <label for="tag_id">ID da Tag:</label>
+                            <input type="text" class="form-control" id="tag_id" name="tag_id">
+                        </div>
+                        <div class="form-group">
+                            <label for="coordenador_id">ID do Coordenador:</label>
+                            <input type="text" class="form-control" id="coordenador_id" name="coordenador_id">
+                        </div> --}}
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -91,7 +86,7 @@
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
+                    <div class="text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
@@ -110,8 +105,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

@@ -15,7 +15,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Inicio</span></a>
+                    <span>Posts</span></a>
             </li>
 {{-- 
             <!-- Divider -->

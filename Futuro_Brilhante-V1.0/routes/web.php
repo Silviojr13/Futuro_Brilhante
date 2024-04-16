@@ -3,6 +3,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Aluno;
 use App\Models\Professor;
+use App\Models\Post;
+use App\Http\Controllers\PostController;
 
 // Rotas para CRUD dos Alunos
 Route::get('/', function () {
@@ -158,3 +160,11 @@ Route::get('/professorestb', function () {
 
 //     return redirect('/home')->with('success', 'Post inserido com sucesso!');
 // });
+
+
+Route::get('/criar_post', 'PostController@create');
+Route::post('/cadastrar_post', 'PostController@store');
+
+Route::get('/cadastrarPost', function () {
+    return view('cadastrarPost');
+});
