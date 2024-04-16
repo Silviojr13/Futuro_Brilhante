@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('turmas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_classe');
-            $table->foreign('id_classe')->references('id')->on('classes');
+            // $table->foreign('id_classe')->references('id')->on('classes');
             $table->unsignedBigInteger('id_professor');
-            $table->foreign('id_professor')->references('id')->on('professores');
+            // $table->foreign('id_professor')->references('id')->on('professores');
             $table->timestamps();
         });
     }

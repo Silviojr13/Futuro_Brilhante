@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('Imagem')->nullable();
             $table->unsignedBigInteger('tag_id');
             $table->unsignedBigInteger('coordenador_id');
-            $table->foreign('tag_id')->references('id')->on('tags');
-            $table->foreign('coordenador_id')->references('id')->on('coordenadores');
+            // $table->foreign('tag_id')->references('id')->on('tags');
+            // $table->foreign('coordenador_id')->references('id')->on('coordenadores');
             $table->timestamps();
         });
     }
