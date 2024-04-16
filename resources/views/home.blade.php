@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>home</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+    @include('includes')
 
 </head>
 
@@ -44,7 +45,42 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                  
+                  {{-- escreva aqui --}}
+
+
+                  <table class="table table-bordered" id="alunosTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descrição</th>
+                            <th>Data da Publicação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descrição</th>
+                            <th>Data da Publicação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <!-- Loop through alunos and display them -->
+                        {{-- @foreach($posts as $post)
+                        <tr>
+                            <td>{{ $post->Nome }}</td>
+                            <td>{{ $post->Sobrenome }}</td>
+                            <td>{{ $post->Email }}</td>
+                            <td>
+                                <a href="{{ route('editPost', ['ID_Post' => $post->id]) }}" class="btn btn-primary">Editar</a>
+                                <a href="{{ route('deletePost', ['ID_Post' => $post->id]) }}" class="btn btn-danger">Deletar</a>
+                            </td>
+                        </tr>
+                        @endforeach --}}
+                    </tbody>
+                </table>
+                <a href="/cadastrarAluno" class="floating-btn"><i class="fas fa-plus"></i></a>
 
                 </div>
                 <!-- /.container-fluid -->

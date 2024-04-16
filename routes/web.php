@@ -71,7 +71,7 @@ Route::get('/alunostb', function () {
     return view('alunostb', ['alunos' => $alunos]);
 });
 
-
+// =========================================================================================================================================
 // Rotas para CRUD dos Professores
 
 Route::post('/cadastrar_professor', function (Request $request) {
@@ -136,3 +136,25 @@ Route::get('/professorestb', function () {
     $professores = Professor::all();
     return view('professorestb', ['professores' => $professores]);
 });
+
+
+//=========================================================================================================================
+// CRUD para Post
+
+// Rout::get('/criar_post', function (Request $request){
+//     $request->validate([
+//         'titulo'=> 'required',
+//         'descricao'=> 'required',
+//         'data_publicacao'=> 'required',
+//         'imagem'=> 'required',
+//     ]);
+
+//     Post::create([
+//         'Titulo'=> $request->titulo,
+//         'Descricao'=> $request->descricao,
+//         'Data_Publicacao'=> $request->data_publicacao,
+//         'imagem'=> $request->imagem,
+//     ]);
+
+//     return redirect('/home')->with('success', 'Post inserido com sucesso!');
+// });
