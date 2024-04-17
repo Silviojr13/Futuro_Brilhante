@@ -11,6 +11,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::post('/cadastrar_aluno', function (Request $request) {
     $request->validate([
         'nome' => 'required',
