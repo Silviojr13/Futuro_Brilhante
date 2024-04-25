@@ -101,12 +101,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/alunostb">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>tabela aluno</span></a>
+                    <span>cadastro Aluno</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/professorestb">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>tabela professor</span></a>
+                    <span>Cadastro Professor</span></a>
             </li>
 
             <!-- Divider -->

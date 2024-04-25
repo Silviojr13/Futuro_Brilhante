@@ -10,5 +10,5 @@ class Aluno extends Model
     use HasFactory;
 
 
-    protected $fillable = ['Nome', 'Sobrenome', 'Email', 'Senha'];
+    protected $fillable = ['nome', 'sobrenome', 'email', 'senha'];
 }

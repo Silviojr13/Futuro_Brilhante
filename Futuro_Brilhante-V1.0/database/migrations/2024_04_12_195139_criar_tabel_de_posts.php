@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('Titulo');
-            $table->text('Descricao')->nullable();
-            $table->date('Data_Publicacao')->nullable();
-            $table->string('Imagem')->nullable();
-            $table->unsignedBigInteger('tag_id');
-            $table->unsignedBigInteger('coordenador_id');
+            $table->string('titulo');
+            $table->text('descricao')->nullable();
+            $table->date('data_publicacao')->nullable();
+            $table->string('imagem')->nullable();
+            // $table->unsignedBigInteger('tag_id');
+            // $table->unsignedBigInteger('coordenador_id');
             // $table->foreign('tag_id')->references('id')->on('tags');
             // $table->foreign('coordenador_id')->references('id')->on('coordenadores');
             $table->timestamps();

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->string('Nome');
-            $table->string('Sobrenome');
-            $table->string('Email')->unique();
-            $table->string('Senha');
+            $table->string('nome');
+            $table->string('sobrenome');
+            $table->string('email')->unique();
+            $table->string('senha');
             // $table->unsignedBigInteger('ID_Turma');
             // $table->foreign('ID_Turma')->references('ID_Turma')->on('turmas');
             $table->timestamps();
